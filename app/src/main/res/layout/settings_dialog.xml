@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room name"
+            android:inputType="textPersonName"
+            android:maxLength="4096"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/sensorsTextView"
+            style="@style/TextAppearance.AppCompat.Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sensors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
+        <CheckBox
+            android:id="@+id/temperatureCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            app:layout_constraintEnd_toStartOf="@+id/humidityCheck"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sensorsTextView" />
+
+        <CheckBox
+            android:id="@+id/humidityCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            app:layout_constraintEnd_toStartOf="@+id/noiseCheck"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/temperatureCheck"
+            app:layout_constraintTop_toBottomOf="@+id/sensorsTextView" />
+
+        <CheckBox
+            android:id="@+id/noiseCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/humidityCheck"
+            app:layout_constraintTop_toBottomOf="@+id/sensorsTextView" />
+
+        <CheckBox
+            android:id="@+id/vibrationCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibration"
+            app:layout_constraintStart_toStartOf="@+id/temperatureCheck"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureCheck" />
+
+        <CheckBox
+            android:id="@+id/motionCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motion"
+            app:layout_constraintStart_toStartOf="@+id/humidityCheck"
+            app:layout_constraintTop_toBottomOf="@+id/humidityCheck" />
+
+        <ImageView
+            android:id="@+id/separator1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#000000"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/motionCheck" />
+
+        <TextView
+            android:id="@+id/actuatorsTextView"
+            style="@style/TextAppearance.AppCompat.Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Actuators"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator1" />
+
+        <CheckBox
+            android:id="@+id/alarmCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Alarm"
+            app:layout_constraintStart_toStartOf="@+id/vibrationCheck"
+            app:layout_constraintTop_toBottomOf="@+id/actuatorsTextView" />
+
+        <CheckBox
+            android:id="@+id/lightCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            app:layout_constraintStart_toStartOf="@+id/motionCheck"
+            app:layout_constraintTop_toTopOf="@+id/alarmCheck" />
+
+        <ImageView
+            android:id="@+id/separator2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#000000"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alarmCheck" />
+
+        <Switch
+            android:id="@+id/alarmSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Activate alarm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator2" />
+
+
+        <EditText
+            android:id="@+id/alarmInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alarm time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:focusable="false"
+            app:layout_constraintTop_toBottomOf="@+id/alarmSwitch" />
+
+        <Switch
+            android:id="@+id/nightSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Activate night monitoring"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alarmInput" />
+
+        <EditText
+            android:id="@+id/nightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Night time"
+            android:inputType=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:focusable="false"
+            app:layout_constraintTop_toBottomOf="@+id/nightSwitch"/>
+
+        <Switch
+            android:id="@+id/lightSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Activate courtesy light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nightInput" />
+
+        <Switch
+            android:id="@+id/adaptableSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Activate adaptable alarm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lightSwitch" />
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="close"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adaptableSwitch" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/closeButton"
+            app:layout_constraintTop_toTopOf="@+id/closeButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

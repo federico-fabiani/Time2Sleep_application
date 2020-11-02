@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Time2Sleep</string>
+
+    <!-- main menu -->
+    <string name="action_set_catalog">Set catalog address</string>
+    <string name="dialog_set_catalog">Edit your catalog IP address:</string>
+    <string name="action_reload">Reload devices list</string>
+    <string name="action_edit_network">Edit network name</string>
+
+</resources>
